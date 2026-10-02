@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeRa — Universal Accessible Coding Ecosystem</title>
+  
+  <!-- Font and Accessibility Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN with dark mode and brand tokens extension -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'Cairo', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', '"Instrument Serif"', 'Georgia', 'serif'],
+            arabic: ['Cairo', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brandBlue: '#3157E8',
+            brandGreen: '#00A86B',
+            emeraldPrimary: '#00A86B',
+            emeraldAccent: '#0f766e',
+            royalBlue: '#2563eb',
+            midnightNavy: '#070e1b',
+            darkBg: '#080d1a',
+            darkSurface: '#101726',
+            darkSoft: '#182238',
+            mintLight: '#f0fdfa',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="transition-colors duration-200 antialiased overflow-x-hidden">
+  <!-- React Primary Mounting Container -->
+  <div id="root"></div>
+
+  <!-- Legacy Container for AssessmentRunner backward-compatibility -->
+  <div id="childTestPage" class="hidden">
+    <div id="app"></div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

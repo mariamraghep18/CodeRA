@@ -1,0 +1,114 @@
+/* =========================================================
+   CodeRa Authoritative Design System Tokens (SKILL.md)
+   ========================================================= */
+
+:root {
+  /* Brand Colors */
+  --color-primary-blue: #3157E8;
+  --color-primary-blue-hover: #2546c7;
+  --color-primary-blue-light: #ebf0fe;
+  
+  --color-primary-green: #0D8068;
+  --color-primary-green-hover: #0a6653;
+  --color-primary-green-light: #e6f6f2;
+
+  /* Accent status colors */
+  --color-warning: #eab308;
+  --color-warning-light: #fef9c3;
+  --color-danger: #ef4444;
+  --color-danger-light: #fee2e2;
+  --color-purple: #7c3aed;
+  --color-purple-light: #f3e8ff;
+
+  /* Light Theme (Default) */
+  --color-bg: #F7F6F1;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #F1EFEA;
+  --color-border: #DDE3E8;
+  --color-text: #18233A;
+  --color-text-muted: #57657d;
+  --color-text-subtle: #8a96a9;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(24, 35, 58, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(24, 35, 58, 0.08), 0 2px 4px -2px rgba(24, 35, 58, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(24, 35, 58, 0.08), 0 4px 6px -4px rgba(24, 35, 58, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(24, 35, 58, 0.1), 0 8px 10px -6px rgba(24, 35, 58, 0.05);
+
+  /* Typography */
+  --font-heading: 'Merriweather', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic: 'Cairo', 'Inter', system-ui, sans-serif;
+
+  /* Sizing scale */
+  --app-font-scale: 1;
+}
+
+/* Dark Theme */
+html.dark {
+  --color-bg: #101522;
+  --color-surface: #182033;
+  --color-surface-soft: #202A3D;
+  --color-border: #283652;
+  --color-text: #F5F7FA;
+  --color-text-muted: #A3B1CC;
+  --color-text-subtle: #6D7F9E;
+
+  --color-primary-blue-light: rgba(49, 87, 232, 0.2);
+  --color-primary-green-light: rgba(13, 128, 104, 0.2);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  --color-bg: #000000 !important;
+  --color-surface: #0a0a0a !important;
+  --color-surface-soft: #1a1a1a !important;
+  --color-border: #ffff00 !important;
+  --color-text: #ffffff !important;
+  --color-text-muted: #ffff00 !important;
+  --color-text-subtle: #ffffff !important;
+  --color-primary-blue: #00e5ff !important;
+  --color-primary-green: #00ff66 !important;
+}
+
+/* Accessibility Font Resizing */
+html.font-large {
+  --app-font-scale: 1.15;
+}
+
+html.font-xlarge {
+  --app-font-scale: 1.30;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: calc(1rem * var(--app-font-scale));
+  transition: background-color 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] {
+  font-family: var(--font-arabic);
+}
+
+.hero-heading {
+  font-family: var(--font-heading);
+}
+
+[dir="rtl"] .hero-heading {
+  font-family: var(--font-arabic);
+  font-weight: 800;
+}
+
+/* Screen Reader Text Utility */
+.sr-hint {
+  outline: 2px dashed #0D8068;
+  outline-offset: 4px;
+}
